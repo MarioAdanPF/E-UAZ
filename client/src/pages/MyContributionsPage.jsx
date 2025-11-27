@@ -4,7 +4,6 @@ import api from '../config/api';
 import ContributionCard from '../components/ContributionCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Button from '../components/Button';
-import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import { PlusCircle, X, Upload } from 'lucide-react';
 

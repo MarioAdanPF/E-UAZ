@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import api from '../config/api';
 import ContributionCard from '../components/ContributionCard';
@@ -11,7 +11,7 @@ const ContributionsPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const limit = 12;
 
-  const { data, isLoading, error, refetch } = useQuery({
+  const { data, isLoading, error } = useQuery({
     queryKey: ['contributions', page],
     queryFn: async () => {
       const response = await api.get(`/contributions?page=${page}&limit=${limit}`);
